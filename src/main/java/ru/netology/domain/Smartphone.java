@@ -7,11 +7,11 @@ import lombok.NoArgsConstructor;
 @EqualsAndHashCode(callSuper = true)
 @Data
 @NoArgsConstructor
-public class Book extends Product {
-    private String author;
+public class Smartphone extends Product{
+    private String manufacturer;
 
-    public Book(int id, String name, int price, String author) {
+    public Smartphone(int id, String name, int price, String manufacturer) {
         super(id, name, price);
-        this.author = author;
+        this.manufacturer = manufacturer;
     }
 }
