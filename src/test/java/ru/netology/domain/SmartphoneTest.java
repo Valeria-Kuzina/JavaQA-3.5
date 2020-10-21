@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class SmartphoneTest {
-    Smartphone smart = new Smartphone();
+    Smartphone smart = new Smartphone(2, "Iphone", 50000, "Apple");
 
     @Test
     void shouldMatchesFalse() {
@@ -13,6 +13,15 @@ class SmartphoneTest {
 
         boolean actual = smart.matches(findToString);
 
-        assertEquals(false, actual);
+        assertFalse(actual);
+    }
+
+    @Test
+    void shouldMatchesTrue() {
+        String findToString = "Iphone";
+
+        boolean actual = smart.matches(findToString);
+
+        assertTrue(actual);
     }
 }

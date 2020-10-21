@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class BookTest {
-    Book book = new Book();
+    Book book = new Book(1, "Alice", 100, "Carroll");
 
     @Test
     void shouldMatchesFalse() {
@@ -13,15 +13,15 @@ class BookTest {
 
         boolean actual = book.matches(findToString);
 
-        assertEquals(false, actual);
+        assertFalse(actual);
     }
 
     @Test
     void shouldMatchesTrue() {
-        String findToString = "Asus";
+        String findToString = "Carroll";
 
         boolean actual = book.matches(findToString);
 
-        assertNotEquals(true, actual);
+        assertTrue(actual);
     }
 }
